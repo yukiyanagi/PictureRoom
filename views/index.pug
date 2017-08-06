@@ -1,0 +1,25 @@
+﻿extends header
+
+block content
+  header.contentHeader
+    h1= title
+  main
+    h2.sectionTitle Upload Picture
+    div.pictureDrop
+      p.pictureDrop__text Picture D&D here !
+      div.pictureDrop__area.js-pictureDropArea
+    div.uploadForms
+      form(action="/" method="POST" enctype="multipart/form-data").uploadForms__container.js-submitForm
+        input#picture(type="file" name="picture" accept="image/*").uploadForms__form.js-uploadForm
+        label(for="picture").uploadForms__label Select Picture
+        p.js-pictureName Picture Name
+        button(type="submit" disabled="disabled").uploadForms__submit.isDisabled.js-uploadButton Upload Picture
+    h2.sectionTitle Thumbanils
+    ul.thumbnailArea.js-thumbnailArea
+      li
+        img.thumbnailArea__thumbnail.js-thumbnailImage
+        h3.thumbnailArea__title.js-thumbnailTitle
+    a(href="/gallery").showMore
+      div.showMore__container.cf
+        div.showMore__top More ...
+        div.showMore__bottom Go to Gallery
