@@ -19,7 +19,7 @@ var multerSetting = upload.single('picture');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Picture Room' });
 });
 router.post('/', multerSetting, function(req, res, next) {
   var result = true;
