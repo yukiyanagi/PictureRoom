@@ -94,7 +94,7 @@
         loadThumbnails: function() {
             var createThumbnail = this.createThumbnail.bind(this);
             $.ajax({
-                url: 'api/file?limit=8',
+                url: 'api/file?min=0&max=8',
                 type: 'GET',
                 cache: false,
                 processData: false,

@@ -17,6 +17,10 @@ body {
 a {
     color: #00B7FF;
 }
+.titleLink {
+    color: #fff;
+    text-decoration: none;
+}
 .contentHeader {
     padding: 0 20px;
     height: 50px;
@@ -209,4 +213,55 @@ a {
 .showMore__bottom {
     background-color: #00B7FF;
     color: #fff;
+}
+.btnContainer {
+    margin-top: 30px;
+    padding: 10px 0;  
+    background-color: #333;
+}
+.loadBtn {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 30px;
+    border: 1px solid #fff;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.loadBtn:hover {
+    opacity: 0.7;
+}
+.loadBtn:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 9px;
+    height: 6px;
+    width: 4px;
+    background-color: #fff;
+    transition: 0.35s;
+}
+.loadBtn:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 14px;
+    right: 5px;
+    height: 0;
+    width: 0;
+    border-top: 7px solid #fff;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: none;
+    transition: 0.35s;
+}
+.loadBtn:hover:before {
+    top: 12px;
+}
+.loadBtn:hover:after {
+    top: 17px;
 }
