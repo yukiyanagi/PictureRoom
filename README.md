@@ -4,13 +4,11 @@ Application for checking how images & pictures look like on the web.
 
 A simple structure that does not use a web server.
 
-Unfinished applications in the process of making.
-
-## Initialize
+## At first
 
 `$ sh setup.sh`
 
-## How to use
+## And start application
 
 `$ npm start`
 

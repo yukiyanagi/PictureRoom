@@ -7,6 +7,7 @@ PictureRoom.IndexPage.prototype = {
         dragged: 'pictureDrop__area--isDragged',
         disabled: 'isDisabled'
     },
+    TIMEOUT: 10000,
     init: function () {
         this.setParameter();
         this.bindEvent();
@@ -72,7 +73,7 @@ PictureRoom.IndexPage.prototype = {
             cache: false,
             processData: false,
             contentType: false,
-            timeout: 10000
+            timeout: this.TIMEOUT
         }).done(function(data){
             if (JSON.parse(data).result) {
             } else {
