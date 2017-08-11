@@ -158,6 +158,7 @@ a {
     height: 240px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
     transition: 0.35s;
+    cursor: pointer;
 }
 .thumbnailArea > li:hover {
     box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
@@ -167,6 +168,7 @@ a {
     width: 160px;
     height: 160px;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
 }
 .thumbnailArea__title {
     margin-top: 10px;
@@ -229,7 +231,6 @@ a {
     background-color: #333;
     color: #fff;
     font-size: 14px;
-    cursor: pointer;
 }
 .loadBtn:hover {
     opacity: 0.7;
@@ -264,4 +265,112 @@ a {
 }
 .loadBtn:hover:after {
     top: 17px;
+}
+.imageDisplay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 0;
+    height: 0;
+    background-color: #333;
+    transition: 0.35s;
+    overflow: hidden;
+    z-index: 3;
+}
+.imageDisplay__inner {
+    padding: 20px;
+    height: 100%;
+    width: 100%;
+}
+.imageDisplay__imageFlame {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+.imageDisplay__closeBtn {
+    position: relative;
+    float: right;
+    margin-top: -10px;
+    margin-right: -10px;
+    height: 30px;
+    width: 30px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background-color: #333;
+    cursor: pointer;
+}
+.imageDisplay__closeBtn:hover {
+    opacity: 0.7;
+}
+.imageDisplay__closeBtn:before,
+.imageDisplay__closeBtn:after {
+    content: '';
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 15px;
+    width: 3px;
+    background-color: #fff;
+}
+.imageDisplay__closeBtn:before {
+    transform: rotate(45deg);
+}
+.imageDisplay__closeBtn:after {
+    transform: rotate(-45deg);
+}
+.imageDisplay__prevBtn,
+.imageDisplay__nextBtn,
+.imageDisplay__prevBtn:before,
+.imageDisplay__nextBtn:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 0;
+    width: 0;
+    margin: auto;
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+}
+.imageDisplay__prevBtn:hover,
+.imageDisplay__nextBtn:hover {
+    opacity: 0.7;
+}
+.imageDisplay__prevBtn {
+    left: 10px;
+    border-left:none;
+    border-right: 20px solid #fff;
+}
+.imageDisplay__nextBtn {
+    right: 10px;
+    border-right: none;
+    border-left: 20px solid #fff;
+}
+.imageDisplay__prevBtn:before {
+    content: '';
+    display: block;
+    left: 6px;
+    border-top-width: 16px;
+    border-bottom-width: 16px;
+    border-left: none;
+    border-right: 16px solid #333;
+}
+.imageDisplay__nextBtn:before {
+    content: '';
+    display: block;
+    right: 6px;
+    border-top-width: 16px;
+    border-bottom-width: 16px;
+    border-right: none;
+    border-left: 16px solid #333;
 }

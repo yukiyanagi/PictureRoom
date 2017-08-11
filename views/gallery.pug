@@ -3,11 +3,13 @@
 
 block content
   main
-    h2.sectionTitle Thumbanils
+    h2.sectionTitle Pictures
     ul.thumbnailArea.js-thumbnailArea
       li
         img.thumbnailArea__thumbnail.js-thumbnailImage
         h3.thumbnailArea__title.js-thumbnailTitle
     div.btnContainer
       button.loadBtn.js-loadBtn Load More
+  include imageDisplay
+  <script src="/javascripts/imageDisplay.js"></script>
   <script src="/javascripts/gallery.js"></script>
