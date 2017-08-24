@@ -1,8 +1,8 @@
 # Picture Room
 
-Application for checking how images & pictures look like on the web.
+Application for checking images with browser.
 
-A simple structure that does not use a web server.
+DB is not used.
 
 ## At first
 
@@ -12,4 +12,4 @@ A simple structure that does not use a web server.
 
 `$ npm start`
 
-Look web page on your browser at *locahost:3000*
+Please check *localhost:3000* with your favorite browser.

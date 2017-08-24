@@ -43,10 +43,6 @@ PictureRoom.IndexPage.prototype = {
         e.preventDefault();
         this.$uploadForm.trigger('click');
     },
-    dropPictureArea: function (e) {
-        e.preventDefault();
-        this.leavePictureArea(e);
-    },
     selectFile: function (e) {
         this.$uploadButton.removeClass(this.CLASS.disabled);
         this.$uploadButton.prop('disabled', false);
